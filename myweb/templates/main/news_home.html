@@ -1,0 +1,30 @@
+{% extends 'main/index.html' %}
+
+{% block title %} News website {% endblock %}
+
+{% block content %}
+
+
+
+<div class="feauters">
+    <h1>News page</h1>
+    <div class="conteiner">
+        {% if news %}
+        {% for new in news %}
+        <div class="blog">
+            <h3><span>Nomlanishi:</span> {{ new.title }}</h3>
+            <p><span>Anons:</span> {{new.anons}}</p>
+            <p><span>Maqola:</span> {{new.full_test}}</p>
+            <p><span>Maqola sanasi:</span> {{new.data}}</p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="errBlog">
+            <p class="err">Sizda yangiliklar hozircha yo'q  <i style="color: red; font-size: 24px;">!!!</i></p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}
