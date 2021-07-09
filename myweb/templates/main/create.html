@@ -1,0 +1,24 @@
+{% extends 'main/index.html' %}
+
+{% block title %} Create foms  {% endblock %}
+
+{% block content %}
+
+<div class="home">
+    <h1>Create news  page...</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.anons }}<br>
+        {{ form.full_test }}<br>
+        {{ form.data }}<br>
+        <span>{{ error }}</span>
+<!--        <input type="text" placeholder="Nomlanishi" class="form-control"><br>-->
+<!--        <input type="text" placeholder="Anons" class="form-control"><br>-->
+<!--        <textarea class="form-control" placeholder="Maqolalar..."></textarea><br>-->
+<!--        <input type="date" class="form-control"><br>-->
+<!--        <input type="time" class="form-control"><br>-->
+        <button class="btn btn-primary" type="submit">Create news</button>
+    </form>
+</div>
+{% endblock %}
